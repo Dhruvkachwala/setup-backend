@@ -2,9 +2,10 @@ const app = require('./app')
 const logger = require('./config/logger')
 
 const config = require('./config/config')
-
+const connectDB = require('./db/dbConnection')
 let server
 
+connectDB()
 
 server = app.listen(3001, () => {
     logger.info(`Listening to port ${config.port}`)

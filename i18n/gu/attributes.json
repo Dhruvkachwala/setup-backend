@@ -1,0 +1,14 @@
+{
+    "route": "રૂટ",
+    "image_type": "jpeg, jpg, png",
+    "user": "વપરાશકર્તા",
+    "role": "રોલ",
+    "otp": "ઓટીપી",
+    "email": "ઇમેઇલ",
+    "password": "પાસવર્ડ",
+    "login": "પ્રવેશ કરો",
+    "logout": "લગઆઉટ",
+    "status": "સ્થિતિ",
+    "refresh_token": "રિફ્રેશ ટોકન",
+    "userId": "વપરાશકર્તા આઈડી"
+}

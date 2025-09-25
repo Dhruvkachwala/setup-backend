@@ -1,12 +1,15 @@
 const app = require('./app')
+const logger = require('./config/logger')
 
-// const config = require('./config/config')
-
+const config = require('./config/config')
+const connectDB = require('./db/dbConnection')
 let server
 
+connectDB()
 
 server = app.listen(3001, () => {
-    console.log(`Listening to port 3001`)
+    logger.info(`Listening to port ${config.port}`)
+
 }
 )
 
@@ -14,7 +17,7 @@ server = app.listen(3001, () => {
 const exitHandler =()=>{
     if(server){
         server.close(()=>{
-            console.log('Server closed')
+        logger.info('Server closed')
             process.exit(1)
 
         })
@@ -25,7 +28,7 @@ const exitHandler =()=>{
 }
 
 const unexpectedErrorHandler = (error) => {     
-    console.log(error)
+logger.error(error)
     exitHandler()
 }
 
@@ -34,7 +37,7 @@ process.on('unhandledRejection', unexpectedErrorHandler)
 
 
 process.on('SIGTERM', () => {
-    console.log('SIGTERM received')
+    logger.info('SIGTERM received')
     if (server) {
         server.close()
     }

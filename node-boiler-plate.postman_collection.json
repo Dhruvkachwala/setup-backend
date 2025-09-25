@@ -1,0 +1,447 @@
+{
+    "info": {
+        "_postman_id": "6d145218-7a48-4871-95a5-cf0c17795fe0",
+        "name": "node-boiler-plate",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "_exporter_id": "21016516"
+    },
+    "item": [
+        {
+            "name": "Common",
+            "item": [
+                {
+                    "name": "Auth",
+                    "item": [
+                        {
+                            "name": "Register",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"first_name\":\"jone\", // Required\n    \"last_name\":\"due\", // Required\n    \"email\":\"jone.micrasol@gmail.com\", // Required\n    \"password\":\"jone@123456\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/register",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["register"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Verify-otp",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"jone.micrasol@gmail.com\", // Required\n    \"otp\":\"3501\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/verify-otp",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["verify-otp"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Send otp",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"jone.micrasol@gmail.com\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/send-otp",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["send-otp"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Login",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"jone.micrasol@gmail.com\", // Required\n    \"password\":\"jone@123456\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/login",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["login"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Logout",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"refreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NDkxNTFiMThjZTg1YzRlZjZmOTQwNmQiLCJpYXQiOjE2ODcyNDY0NDgsImV4cCI6MTY4OTgzODQ0OCwidHlwZSI6InJlZnJlc2giLCJyb2xlIjoidXNlciJ9.x2533Dqzbn2Kyocu9SHikoev48AK1ZVKjfD_-VSnkSc\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/logout",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["logout"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Social login",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"first_name\":\"jone7878\", // Required\n    \"last_name\":\"Bahlaaniaa\", // Required\n    \"email\":\"jone.miasol@gmail.com\", // Required\n    \"social_id\":\"szd\", // Required\n    \"social_type\":\"Google\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/social-login",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["social-login"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Reset password",
+                            "request": {
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"jone.micrasol@gmail.com\", // Required\n    \"password\":\"jone@123459\", // Required\n    \"otp\":\"2589\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/reset-password",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["reset-password"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Change password",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZlZTFlODFkOWUyYzc0NjZjYWE2ZTIiLCJpYXQiOjE2OTQ0MjY0ODIsImV4cCI6MTcyNjA0ODg4MiwidHlwZSI6IkFjY2VzcyIsInJvbGUiOiJVc2VyIn0.0UOFbQFkzZR9_qI1VrwvzsWa9O16-rPsygbIRsbM8FM",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"old_password\":\"jone@654321\", // Required\n    \"new_password\":\"jone@123456\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}auth/change-password",
+                                    "host": ["{{LOCAL_URL}}auth"],
+                                    "path": ["change-password"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "User",
+            "item": [
+                {
+                    "name": "user",
+                    "item": [
+                        {
+                            "name": "Update user",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI2NGZlZTljODBiYTdjMDZjNjhkNTJhZDgiLCJpYXQiOjE2OTQ0OTMyNjEsImV4cCI6MTcyNjExNTY2MSwidHlwZSI6IkFjY2VzcyIsInJvbGUiOiJVc2VyIn0.PsmNfq81gKLGzP2WsbdUtwkpJY8UI-ExC47gm5blM1Q",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "PUT",
+                                "header": [],
+                                "body": {
+                                    "mode": "formdata",
+                                    "formdata": [
+                                        {
+                                            "key": "user_image",
+                                            "description": "Optional",
+                                            "type": "file",
+                                            "src": "/Users/micra/Downloads/5.png"
+                                        },
+                                        {
+                                            "key": "first_name",
+                                            "value": "jonepp",
+                                            "description": "Required",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "key": "last_name",
+                                            "value": "dueii",
+                                            "description": "Required",
+                                            "type": "text"
+                                        },
+                                        {
+                                            "key": "address",
+                                            "value": "118, city center",
+                                            "description": "Optional",
+                                            "type": "text"
+                                        }
+                                    ]
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}user/update",
+                                    "host": ["{{LOCAL_URL}}user"],
+                                    "path": ["update"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Get user",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{USER_TOKEN}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}user/get",
+                                    "host": ["{{LOCAL_URL}}user"],
+                                    "path": ["get"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Admin",
+            "item": [
+                {
+                    "name": "User",
+                    "item": [
+                        {
+                            "name": "Get all users",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{ADMIN_TOKEN}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}admin/user/list?page=&limit=&search=&is_block=false&sort_by=first_name:desc",
+                                    "host": ["{{LOCAL_URL}}admin"],
+                                    "path": ["user", "list"],
+                                    "query": [
+                                        {
+                                            "key": "page",
+                                            "value": "",
+                                            "description": "Optional"
+                                        },
+                                        {
+                                            "key": "limit",
+                                            "value": "",
+                                            "description": "Optional"
+                                        },
+                                        {
+                                            "key": "search",
+                                            "value": "",
+                                            "description": "Optional"
+                                        },
+                                        {
+                                            "key": "is_block",
+                                            "value": "false",
+                                            "description": "Optional"
+                                        },
+                                        {
+                                            "key": "sort_by",
+                                            "value": "first_name:desc",
+                                            "description": "Optional Ex: first_name:desc, first_name:asc"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Get single user",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{ADMIN_TOKEN}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "GET",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}admin/user/get/649a63b20cc131be0bc05a1d",
+                                    "host": ["{{LOCAL_URL}}admin"],
+                                    "path": ["user", "get", "649a63b20cc131be0bc05a1d"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Block/Unblock user",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{ADMIN_TOKEN}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "PATCH",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}admin/user/block/64fee1e81d9e2c7466caa6e2",
+                                    "host": ["{{LOCAL_URL}}admin"],
+                                    "path": ["user", "block", "64fee1e81d9e2c7466caa6e2"]
+                                }
+                            },
+                            "response": []
+                        },
+                        {
+                            "name": "Delete user (SOFT DELETE)",
+                            "request": {
+                                "auth": {
+                                    "type": "bearer",
+                                    "bearer": [
+                                        {
+                                            "key": "token",
+                                            "value": "{{ADMIN_TOKEN}}",
+                                            "type": "string"
+                                        }
+                                    ]
+                                },
+                                "method": "DELETE",
+                                "header": [],
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}admin/user/delete/649a63b20cc131be0bc05a1d",
+                                    "host": ["{{LOCAL_URL}}admin"],
+                                    "path": ["user", "delete", "649a63b20cc131be0bc05a1d"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                },
+                {
+                    "name": "Auth",
+                    "item": [
+                        {
+                            "name": "admin login",
+                            "request": {
+                                "method": "POST",
+                                "header": [],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n    \"email\":\"admin@gmail.com\", // Required\n    \"password\":\"Admin@123\" // Required\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{LOCAL_URL}}admin/auth/login",
+                                    "host": ["{{LOCAL_URL}}admin"],
+                                    "path": ["auth", "login"]
+                                }
+                            },
+                            "response": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
